@@ -53,7 +53,6 @@ Comper Swift simulation config.
   </current-view>
 
   <sound>
-   <audible>true</audible>
    <path>Aircraft/c172/c172-sound.xml</path>
   </sound>
 
