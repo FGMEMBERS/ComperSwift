@@ -12,6 +12,7 @@ Comper Swift simulation config.
     <flight-model>yasim</flight-model>
     <status>beta</status>
     <aero>ComperSwift-yasim</aero>
+    <author>Lee Elliott</author>
     <fuel-fraction>1.0</fuel-fraction>
 
     <description>Comper Swift</description>
