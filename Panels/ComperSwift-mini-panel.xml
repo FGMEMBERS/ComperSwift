@@ -183,8 +183,8 @@ Hacked by Lee Elliott for the Comper Swift mock panel
   <instrument include="Instruments/digital-ap-speed-kt.xml">
    <name>AP Speed-Kt Instruiment</name>
    <params>
-    <spd-disp>/autopilot/settings/speed-kt</spd-disp>
-    <spd-ctrl>/autopilot/settings/speed-kt</spd-ctrl>
+    <spd-disp>/autopilot/settings/target-speed-kt</spd-disp>
+    <spd-ctrl>/autopilot/settings/target-speed-kt</spd-ctrl>
    </params>
    <x>300</x>
    <y>46</y>

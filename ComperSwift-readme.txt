@@ -20,20 +20,19 @@ down.  This is to be resolved.
 
 The engine model still requires some more work too, but seems
 to be generating the right sort of power at the right rpm.
-The issues with the engine are concerned with the fuel
+The issues with the engine are concerned with the gearing, fuel
 consumption and mixture settings.
 
 The engine will start and run with the mixture at the default
-setting of 0.05 but won't generate enough power to move the a/c.
-This is intentional.  The 'parking brake' has been set to 0.1,
+setting of 1.0 but won't generate enough power to move the a/c.
+This is intentional.  The 'parking brake' has been set to 0.04,
 to simulate the rolling resistance of the low-pressure tyres
 fitted to the Swift.  Afaik, the Swift had no brakes and relied
 upon it's low approach speed and the rolling resistance of the
 LP tyres to stop once on the ground.
 
 Once the engine is running, you can either control the throttle
-manually or via the AP but to actually get moving and into the
-air the mixture should be increased to around 0.65.
+manually or via the AP.
 
 For info:
 ---------
@@ -46,8 +45,6 @@ Normal engine power and rpm is 75 b.h.p. @ 3000 r.p.m. and
 the maximium power is 85 b.h.p. @ 3300 r.p.m. for a maximum
 of ten minutes.
 
-The prop is geared at 0.47 of the engine crankshaft speed.
-
 ----
-Lee Elliott.  2004-01-29.
+Lee Elliott.  2004-09-12.
 
