@@ -1,0 +1,240 @@
+<?xml version="1.0"?>
+
+<!-- Comper Swift model config file - Lee Elliott -->
+
+<PropertyList>
+
+ <path>ComperSwift-000-038h.ac</path>
+
+<!-- De-select pilot when in view 0 -->
+ <animation>
+  <type>select</type>
+  <object-name>CPT-Pilot-Head</object-name>
+  <object-name>CPT-Pilot-Body</object-name>
+  <object-name>CPT-Helmet</object-name>
+  <object-name>CPT-Visor</object-name>
+  <condition>
+   <not>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+   </not>
+  </condition>
+ </animation>
+
+<!-- Prop bits -->
+ <animation>
+  <type>select</type>
+  <object-name>PropBladesFront</object-name>
+  <object-name>PropBladesBack</object-name>
+  <condition>
+   <less-than>
+    <property>engines/engine[0]/rpm</property>
+    <value>500</value>
+   </less-than>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>PropDisk</object-name>
+  <condition>
+   <greater-than>
+    <property>engines/engine[0]/rpm</property>
+    <value>400</value>
+   </greater-than>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>spin</type>
+  <object-name>PropSpinner</object-name>
+  <object-name>PropHub</object-name>
+  <property>engines/engine[0]/rpm</property>
+  <factor>0.5</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>spin</type>
+  <object-name>PropBladesFront</object-name>
+  <object-name>PropBladesBack</object-name>
+  <property>engines/engine[0]/rpm</property>
+  <factor>0.5</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>spin</type>
+  <object-name>PropDisk</object-name>
+  <property>engines/engine[0]/rpm</property>
+  <factor>0.5</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+<!-- Tailfin bits -->
+ <animation>
+  <type>rotate</type>
+  <object-name>RudderLeft</object-name>
+  <object-name>RudderRight</object-name>
+  <object-name>RudderCap</object-name>
+  <property>surface-positions/rudder-pos-norm</property>
+  <factor>45</factor>
+  <center>
+   <x-m>5.10</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+
+<!-- Tailplane bits -->
+ <animation>
+  <type>rotate</type>
+  <object-name>LElevatorTop</object-name>
+  <object-name>LElevatorBottom</object-name>
+  <object-name>LElevatorCap</object-name>
+  <property>surface-positions/left-elevator-pos-norm</property>
+  <factor>-35</factor>
+  <center>
+   <x-m>5.0</x-m>
+   <y-m>0</y-m>
+   <z-m>-0.01</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>-1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>RElevatorTop</object-name>
+  <object-name>RElevatorBottom</object-name>
+  <object-name>RElevatorCap</object-name>
+  <property>surface-positions/right-elevator-pos-norm</property>
+  <factor>-35</factor>
+  <center>
+   <x-m>5.0</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.01</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>-1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+<!-- Aileron bits -->
+ <animation>
+  <type>rotate</type>
+  <object-name>LAileronTop</object-name>
+  <object-name>LAileronBottom</object-name>
+  <object-name>LAileronCap</object-name>
+  <property>surface-positions/left-aileron-pos-norm</property>
+  <factor>-12</factor>
+  <center>
+   <x-m>2.16</x-m>
+   <y-m>2.0</y-m>
+   <z-m>0.38</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>-1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>RAileronTop</object-name>
+  <object-name>RAileronBottom</object-name>
+  <object-name>RAileronCap</object-name>
+  <property>surface-positions/right-aileron-pos-norm</property>
+  <factor>-12</factor>
+  <center>
+   <x-m>2.16</x-m>
+   <y-m>-2.0</y-m>
+   <z-m>0.38</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>-1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+<!-- Gear Compression -->
+ <animation>
+  <type>rotate</type>
+  <object-name>LMainStrut</object-name>
+  <object-name>LMainTyre</object-name>
+  <object-name>LMainHub</object-name>
+  <property>gear/gear[1]/compression-norm</property>
+  <factor>-15</factor>
+  <center>
+   <x-m>1.5</x-m>
+   <y-m>-0.06</y-m>
+   <z-m>-0.6</z-m>
+  </center>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>RMainStrut</object-name>
+  <object-name>RMainTyre</object-name>
+  <object-name>RMainHub</object-name>
+  <property>gear/gear[2]/compression-norm</property>
+  <factor>-15</factor>
+  <center>
+   <x-m>1.5</x-m>
+   <y-m>-0.06</y-m>
+   <z-m>-0.6</z-m>
+  </center>
+  <axis>
+   <x>-1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+</PropertyList>

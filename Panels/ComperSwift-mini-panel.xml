@@ -1,0 +1,239 @@
+<?xml version="1.0"?>
+
+<!--
+Cessna 310 "mini" panel.
+October 2000
+John Check <j4strngs@rockfish.net>
+_______________________________________________________________________
+
+This is a panel configuration file for the open-source flight
+simulator FlightGear (www.flightgear.org).  The file is an XML-encoded
+FlightGear property list defining the panel's background texture and
+the location (and optionally, size) of the instruments that will
+appear on the panel.
+
+Each instrument is, itself, defined in an XML-encoded property list
+in a separate file.
+
+Co-ordinates are relative to the *bottom* left corner of the screen
+(as in OpenGL).  The total FlightGear window is always considered to
+be 1024x768, whatever its actual display size on the screen.  All
+paths are relative to $FG_ROOT.
+
+Note that the name of the element defining each instrument must be
+different, or else instrument definitions will be overwritten:
+that's not particularly XML-ish, but that's how property lists
+work in FlightGear right now.
+
+Each instrument has its own preferred width and height, but you can
+override those by providing <w>..</w> and <h>..</h> properties with the
+<x>...</x> and <y>...</y> properties.
+
+Hacked by Lee Elliott for the Comper Swift mock panel
+<leee-fgfs@spatial.freeserve.co.uk>
+-->
+
+<!DOCTYPE PropertyList SYSTEM "panel.dtd">
+
+<PropertyList>
+
+ <name>Comper Swift Mini Panel</name>
+ <background>Aircraft/ComperSwift/Panels/Textures/panel-trans-mini-bg.rgb</background>
+ <w>1024</w>
+ <h>145</h>
+ <y-offset>0</y-offset>
+ <view-height>768</view-height>
+
+ <instruments>
+
+<!-- controls cluster -->
+<!-- Throttles -->
+
+  <instrument include="Instruments/single-throttle-quadrant-trans.xml">
+   <name>Throttle quadrant</name>
+   <params>
+    <engine-throttle-select>/controls/engines/engine[0]/throttle</engine-throttle-select>
+   </params>
+   <x>474</x>
+   <y>33</y>
+   <w>12</w>
+   <h>60</h>
+  </instrument>
+
+<!--  end  controls cluster -->
+
+<!-- controls visual feedback cluster -->
+
+  <instrument include="Instruments/controls-trans.xml">
+   <name>Control Position Indicators</name>
+   <x>250</x>
+   <y>60</y>
+   <w>90</w>
+   <h>90</h>
+  </instrument>
+
+<!-- end controls visual feedback cluster -->
+
+  <instrument include="Instruments/attitude-indicator.xml">
+   <name>Attitude Gyro</name>
+   <x>105</x>
+   <y>100</y>
+   <w>65</w>
+   <h>65</h>
+  </instrument>
+
+  <instrument include="Instruments/turn.xml">
+   <name>Turn Coordinator</name>
+   <x>170</x>
+   <y>100</y>
+   <w>65</w>
+   <h>65</h>
+  </instrument>
+
+  <instrument include="Instruments/hsi.xml">
+   <name>Horizontal Situation Indicator</name>
+   <x>40</x>
+   <y>100</y>
+   <w>65</w>
+   <h>65</h>
+  </instrument>
+
+  <instrument include="Instruments/aoa-indexer.xml">
+   <name>AoAI</name>
+   <x>225</x>
+   <y>60</y>
+   <w>15</w>
+   <h>65</h>
+  </instrument>
+
+<!-- Digital instruments -->
+
+  <instrument include="Instruments/digital-alt.xml">
+   <name>Altitude display</name>
+   <x>640</x>
+   <y>115</y>
+   <w>40</w>
+   <h>10</h>
+  </instrument>
+
+  <instrument include="Instruments/digital-vsi.xml">
+   <name>Vsi display</name>
+   <x>768</x>
+   <y>115</y>
+   <w>40</w>
+   <h>10</h>
+  </instrument>
+
+  <instrument include="Instruments/digital-agl.xml">
+   <name>Elevation AGL display</name>
+   <x>896</x>
+   <y>115</y>
+   <w>40</w>
+   <h>10</h>
+  </instrument>
+
+  <instrument include="Instruments/digital-kias.xml">
+   <name>KIAS display</name>
+   <x>640</x>
+   <y>92</y>
+   <w>40</w>
+   <h>10</h>
+  </instrument>
+
+  <instrument include="Instruments/digital-mach.xml">
+   <name>Mach display</name>
+   <x>768</x>
+   <y>92</y>
+   <w>40</w>
+   <h>10</h>
+  </instrument>
+
+  <instrument include="Instruments/digital-accl.xml">
+   <name>Accel display</name>
+   <x>896</x>
+   <y>92</y>
+   <w>40</w>
+   <h>10</h>
+  </instrument>
+
+  <instrument include="Instruments/digital-wgt.xml">
+   <name>Weight display</name>
+   <x>300</x>
+   <y>115</y>
+   <w>40</w>
+   <h>10</h>
+  </instrument>
+
+  <instrument include="Instruments/digital-fuel-tot.xml">
+   <name>Fuel tot display</name>
+   <x>300</x>
+   <y>92</y>
+   <w>40</w>
+   <h>10</h>
+  </instrument>
+
+  <instrument include="Instruments/digital-aoa.xml">
+   <name>AoA display</name>
+   <x>300</x>
+   <y>69</y>
+   <w>40</w>
+   <h>10</h>
+  </instrument>
+
+  <instrument include="Instruments/digital-ap-speed-kt.xml">
+   <name>AP Speed-Kt Instruiment</name>
+   <params>
+    <spd-disp>/autopilot/settings/speed-kt</spd-disp>
+    <spd-ctrl>/autopilot/settings/speed-kt</spd-ctrl>
+   </params>
+   <x>300</x>
+   <y>46</y>
+   <w>124</w>
+   <h>40</h>
+  </instrument>
+
+<!-- Engine monitors -->
+  <instrument include="Instruments/digital-engine.xml">
+   <name>Engine 0 display</name>
+   <params>
+    <pt-select>/engines/engine[0]/prop-thrust</pt-select>
+    <rv-select>/engines/engine[0]/rpm</rv-select>
+    <ff-select>/engines/engine[0]/fuel-flow-gph</ff-select>
+    <th-select>/controls/engines/engine[0]/throttle</th-select>
+    <egt-select>/engines/engine[0]/egt-degf</egt-select>
+   </params>
+   <x>640</x>
+   <y>69</y>
+   <w>40</w>
+   <h>10</h>
+  </instrument>
+
+<!-- Mixture Control -->
+  <instrument include="Instruments/digital-mixture.xml">
+   <name>Mixture Instrument</name>
+   <params>
+    <mix-disp>/controls/engines/engine/mixture</mix-disp>
+    <mix-ctrl>/controls/engines/engine/mixture</mix-ctrl>
+   </params>
+   <x>640</x>
+   <y>26</y>
+   <w>124</w>
+   <h>40</h>
+  </instrument>
+
+<!-- Mixture Control -->
+  <instrument include="Instruments/digital-aileron-trim.xml">
+   <name>Mixture Instrument</name>
+   <params>
+    <mix-disp>/controls/flight/aileron-trim</mix-disp>
+    <mix-ctrl>/controls/flight/aileron-trim</mix-ctrl>
+   </params>
+   <x>770</x>
+   <y>26</y>
+   <w>124</w>
+   <h>40</h>
+  </instrument>
+
+</instruments>
+
+</PropertyList>

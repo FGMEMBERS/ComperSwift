@@ -1,0 +1,53 @@
+Comper CLA7 Swift yasim readme.
+
+This is not an authentic representation of a Comper CLA7 Swift
+but it's based on the right numbers, where I could find them.
+
+The actual aircraft modelled is G-ABUU (c/n S32/5) - C of A
+first issued 08/04/1932.  The a/c was used as a company
+demonstrator on an extensive European sales tour in April/May
+1932 and was subsequently placed second in the 1933 King's
+Cup race where it flew as number 26.
+
+Notes
+-----
+There are no flaps on the Swift so I've re-bound the flap keys
+'[/]' to adjust the view control, when sitting in the cockpit,
+to shift the viewpoint left or right, to allow the pilot to see
+what's in front of them.  While this works in the VC mode
+(view 0), in other modes (chase etc.) it shifts the view up &
+down.  This is to be resolved.
+
+The engine model still requires some more work too, but seems
+to be generating the right sort of power at the right rpm.
+The issues with the engine are concerned with the fuel
+consumption and mixture settings.
+
+The engine will start and run with the mixture at the default
+setting of 0.05 but won't generate enough power to move the a/c.
+This is intentional.  The 'parking brake' has been set to 0.1,
+to simulate the rolling resistance of the low-pressure tyres
+fitted to the Swift.  Afaik, the Swift had no brakes and relied
+upon it's low approach speed and the rolling resistance of the
+LP tyres to stop once on the ground.
+
+Once the engine is running, you can either control the throttle
+manually or via the AP but to actually get moving and into the
+air the mixture should be increased to around 0.65.
+
+For info:
+---------
+The Pobjoy 'R' is a seven cyl, air-cooled radial - 2835 cc
+with bore & stroke of 77mm x 87mm and a compression ratio of
+5.7:1.  Petrol consumption is 0.57 pints (Imp) per b.h.p.
+per hour and oil consumption 0.9 pints (Imp) per hour.
+
+Normal engine power and rpm is 75 b.h.p. @ 3000 r.p.m. and
+the maximium power is 85 b.h.p. @ 3300 r.p.m. for a maximum
+of ten minutes.
+
+The prop is geared at 0.47 of the engine crankshaft speed.
+
+----
+Lee Elliott.  2004-01-29.
+
