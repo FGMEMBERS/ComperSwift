@@ -12,7 +12,7 @@ Started 24-7-01 by Timothy Gale
     <h-base>128</h-base>
 
  <params>
-  <nav-gs-needle-deflection>/radios/nav[0]/gs-needle-deflection</nav-gs-needle-deflection>
+  <nav-gs-needle-deflection>/instrumentation/nav[0]/gs-needle-deflection</nav-gs-needle-deflection>
   <hsi-has-gs-needle>/sim/instrument-options/hsi[0]/has-gs-needle</hsi-has-gs-needle>
  </params>
 
@@ -45,7 +45,7 @@ Started 24-7-01 by Timothy Gale
    <type>switch</type>
    <layer>
     <condition>
-     <property>/radios/nav[0]/to-flag</property>
+     <property>/instrumentation/nav[0]/to-flag</property>
     </condition>
     <name>TO flag</name>
     <texture>
@@ -63,7 +63,7 @@ Started 24-7-01 by Timothy Gale
     <type>switch</type>
     <layer>
      <condition>
-      <property>/radios/nav[0]/from-flag</property>
+      <property>/instrumentation/nav[0]/from-flag</property>
      </condition>
      <name>FROM flag</name>
      <texture>
@@ -99,7 +99,7 @@ Started 24-7-01 by Timothy Gale
    </transformation>
    <transformation>
     <type>rotation</type>
-    <property>/radios/nav[0]/radials/selected-deg</property>
+    <property>/instrumentation/nav[0]/radials/selected-deg</property>
     <min>-360.0</min>
     <max>360.0</max>
     <scale>1.0</scale>
@@ -164,7 +164,7 @@ Started 24-7-01 by Timothy Gale
     </transformation>
     <transformation>
      <type>rotation</type>
-     <property>/radios/nav[0]/radials/selected-deg</property>
+     <property>/instrumentation/nav[0]/radials/selected-deg</property>
      <min>-360.0</min>
      <max>360.0</max>
      <scale>1.0</scale>
@@ -193,14 +193,14 @@ Started 24-7-01 by Timothy Gale
    </transformation>
     <transformation>
     <type>rotation</type>
-    <property>/radios/nav[0]/radials/selected-deg</property>
+    <property>/instrumentation/nav[0]/radials/selected-deg</property>
     <min>-360.0</min>
     <max>360.0</max>
     <scale>1.0</scale>
    </transformation>
    <transformation>
     <type>x-shift</type>
-    <property>/radios/nav[0]/heading-needle-deflection</property>
+    <property>/instrumentation/nav[0]/heading-needle-deflection</property>
     <min>-10.0</min>
     <max>10.0</max>
     <scale>3.2</scale>
@@ -444,7 +444,7 @@ Started 24-7-01 by Timothy Gale
     </transformation>
     <transformation>
      <type>rotation</type>
-     <property>/radios/nav[0]/radials/selected-deg</property>
+     <property>/instrumentation/nav[0]/radials/selected-deg</property>
      <min>0</min>
      <max>360</max>
     </transformation>
@@ -462,7 +462,7 @@ Started 24-7-01 by Timothy Gale
     <h>24</h>
     <binding>
     <command>property-adjust</command>
-    <property>/radios/nav[0]/radials/selected-deg</property>
+    <property>/instrumentation/nav[0]/radials/selected-deg</property>
     <step>-1.0</step>
     <min>0</min>
     <max>360</max>
@@ -479,7 +479,7 @@ Started 24-7-01 by Timothy Gale
    <h>24</h>
    <binding>
    <command>property-adjust</command>
-   <property>/radios/nav[0]/radials/selected-deg</property>
+   <property>/instrumentation/nav[0]/radials/selected-deg</property>
    <step>-5.0</step>
    <min>0</min>
    <max>360</max>
@@ -496,7 +496,7 @@ Started 24-7-01 by Timothy Gale
    <h>24</h>
    <binding>
    <command>property-adjust</command>
-   <property>/radios/nav[0]/radials/selected-deg</property>
+   <property>/instrumentation/nav[0]/radials/selected-deg</property>
    <step>1.0</step>
    <min>0</min>
    <max>360</max>
@@ -513,7 +513,7 @@ Started 24-7-01 by Timothy Gale
     <h>24</h>
     <binding>
     <command>property-adjust</command>
-    <property>/radios/nav[0]/radials/selected-deg</property>
+    <property>/instrumentation/nav[0]/radials/selected-deg</property>
     <step>5.0</step>
     <min>0</min>
     <max>360</max>
