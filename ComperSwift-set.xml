@@ -10,6 +10,7 @@ Comper Swift simulation config.
 <PropertyList>
   <sim>
     <flight-model>yasim</flight-model>
+    <status>beta</status>
     <aero>ComperSwift-yasim</aero>
     <fuel-fraction>1.0</fuel-fraction>
 
