@@ -223,7 +223,7 @@ Started 24-7-01 by Timothy Gale
    <transformations>
     <transformation>
      <type>rotation</type>
-     <property>/radios/kr-87/outputs/needle-deg</property>
+     <property>/instrumentation/kr-87/outputs/needle-deg</property>
      <min>-360.0</min>
      <max>360.0</max>
     </transformation>
