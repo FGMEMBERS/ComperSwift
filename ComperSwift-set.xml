@@ -86,6 +86,14 @@ Comper Swift simulation config.
 
     <chase-distance-m type="double" archive="y">-13.7</chase-distance-m>
 
+    <help>
+      <key>
+        <name>[ ]</name>
+        <desc>Adjust view left/right (no flaps!)</desc>
+      </key>
+      <line>make mixture leaner to increase power</line>
+    </help>
+
   </sim>
 
   <input>
