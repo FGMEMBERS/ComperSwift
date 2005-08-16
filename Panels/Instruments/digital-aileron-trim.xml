@@ -155,7 +155,7 @@
    <chunks>
     <chunk>
      <type>literal</type>
-     <text>ATR: </text>
+     <text>Atr: </text>
     </chunk>
    </chunks>
    <transformations>
@@ -190,7 +190,7 @@
    <transformations>
     <transformation>
      <type>x-shift</type>
-     <offset>75</offset>
+     <offset>65</offset>
     </transformation>
     <transformation>
      <type>y-shift</type>
@@ -214,8 +214,8 @@
     <command>property-adjust</command>
     <property alias="../../../../params/trm-ctrl"/>
     <step>-0.01</step>
-    <min>0</min>
-    <max>2000</max>
+    <min>-1</min>
+    <max>1</max>
     <wrap>0</wrap>
    </binding>
   </action>
@@ -231,8 +231,8 @@
     <command>property-adjust</command>
     <property alias="../../../../params/trm-ctrl"/>
     <step>0.01</step>
-    <min>0</min>
-    <max>2000</max>
+    <min>-1</min>
+    <max>1</max>
     <wrap>0</wrap>
    </binding>
   </action>
@@ -248,8 +248,8 @@
     <command>property-adjust</command>
     <property alias="../../../../params/trm-ctrl"/>
     <step>-0.001</step>
-    <min>0</min>
-    <max>2000</max>
+    <min>-1</min>
+    <max>1</max>
     <wrap>0</wrap>
    </binding>
   </action>
@@ -265,8 +265,8 @@
     <command>property-adjust</command>
     <property alias="../../../../params/trm-ctrl"/>
     <step>0.001</step>
-    <min>0</min>
-    <max>2000</max>
+    <min>-1</min>
+    <max>1</max>
     <wrap>0</wrap>
    </binding>
   </action>

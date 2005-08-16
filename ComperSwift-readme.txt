@@ -18,18 +18,9 @@ what's in front of them.  While this works in the VC mode
 (view 0), in other modes (chase etc.) it shifts the view up &
 down.  This is to be resolved.
 
-The engine model still requires some more work too, but seems
-to be generating the right sort of power at the right rpm.
-The issues with the engine are concerned with the gearing, fuel
-consumption and mixture settings.
-
-The engine will start and run with the mixture at the default
-setting of 1.0 but won't generate enough power to move the a/c.
-This is intentional.  The 'parking brake' has been set to 0.04,
-to simulate the rolling resistance of the low-pressure tyres
-fitted to the Swift.  Afaik, the Swift had no brakes and relied
-upon it's low approach speed and the rolling resistance of the
-LP tyres to stop once on the ground.
+Afaik, the Swift had no brakes and relied upon it's low
+approach speed and the rolling resistance of the LP tyres to
+stop once on the ground.
 
 Once the engine is running, you can either control the throttle
 manually or via the AP.

@@ -77,37 +77,17 @@
  the prop, for which I've added a guesswork figure of 15lbs.
 -->
 
-  <propeller radius="0.93" x="-0.15" y="0" z="0" mass="165" moment="5"
-             cruise-alt="0" cruise-speed="100"
-             cruise-rpm="3000" cruise-power="76.5"
-             takeoff-rpm="3300" takeoff-power="85">
-    <actionpt x="0" y="0" z="0"/>
-
-<!--
   <propeller radius="0.93" x="-0.15" y="0" z="0" mass="165" moment="-5"
              cruise-alt="0" cruise-speed="100"
              cruise-rpm="1395" cruise-power="76.5"
              takeoff-rpm="1551" takeoff-power="85"
              gear-ratio="0.47">
     <actionpt x="0" y="0" z="0"/>
--->
-<!--
-  <propeller radius="0.93" x="-0.15" y="0" z="0" mass="165" moment="5"
-             cruise-alt="0" cruise-speed="100"
-             cruise-rpm="1395" cruise-power="76.5"
-             takeoff-rpm="1551" takeoff-power="85">
-    <actionpt x="0" y="0" z="0"/>
--->
 
     <piston-engine eng-power="85" eng-rpm="3300"
                    displacement="172.935" compression="5.7"
                    turbo-mul="1" >
 
-<!--
-    <piston-engine eng-power="85" eng-rpm="1551"
-                   displacement="172.935" compression="5.7"
-                   turbo-mul="1" >
--->
       <control-input axis="/controls/engines/engine[0]/throttle"
                      control="THROTTLE"/>
       <control-input axis="/controls/engines/engine[0]/starter"

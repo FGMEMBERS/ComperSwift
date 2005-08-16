@@ -30,7 +30,7 @@ override those by providing <w>..</w> and <h>..</h> properties with the
 <x>...</x> and <y>...</y> properties.
 
 Hacked by Lee Elliott for the Comper Swift mock panel
-<leee-fgfs@spatial.freeserve.co.uk>
+
 -->
 
 <!DOCTYPE PropertyList SYSTEM "panel.dtd">
@@ -221,7 +221,7 @@ Hacked by Lee Elliott for the Comper Swift mock panel
    <h>40</h>
   </instrument>
 
-<!-- Mixture Control -->
+<!-- Aileron Trim Control -->
   <instrument include="Instruments/digital-aileron-trim.xml">
    <name>Mixture Instrument</name>
    <params>
@@ -232,6 +232,14 @@ Hacked by Lee Elliott for the Comper Swift mock panel
    <y>26</y>
    <w>124</w>
    <h>40</h>
+  </instrument>
+
+  <instrument include="Instruments/digital-wind-speed-direction.xml">
+   <name>Wind display</name>
+   <x>493</x>
+   <y>118</y>
+   <w>124</w>
+   <h>34</h>
   </instrument>
 
 </instruments>

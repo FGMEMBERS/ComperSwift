@@ -3,12 +3,16 @@
 ************************************************************************
 Comper Swift simulation config.
 
-2004-01-21 Lee Elliott  leee-fgfs@spatial.freeserve.co.uk
+2005-08-10 Lee Elliott
 ************************************************************************
 -->
 
 <PropertyList>
   <sim>
+    <startup>
+      <splash-texture>Aircraft/ComperSwift/ComperSwift-splash.rgb</splash-texture>
+    </startup>
+
     <flight-model>yasim</flight-model>
     <status>beta</status>
     <aero>ComperSwift-yasim</aero>
@@ -19,6 +23,8 @@ Comper Swift simulation config.
 
     <virtual-cockpit archive="y">true</virtual-cockpit>
 
+    <number-views type="int" archive="y">7</number-views>
+    
     <view n="0">
       <internal archive="y">true</internal>
       <config>
@@ -50,6 +56,30 @@ Comper Swift simulation config.
       </config>
     </view>
 
+    <view n="6">
+      <name>Drop View</name>
+      <type>lookat</type>
+      <config>
+        <eye-lat-deg-path>/sim/view[6]/latitude-deg</eye-lat-deg-path>
+        <eye-lon-deg-path>/sim/view[6]/longitude-deg</eye-lon-deg-path>
+        <eye-alt-ft-path>/sim/view[6]/altitude-ft</eye-alt-ft-path>
+        <eye-roll-deg-path>/sim/view[6]/roll-deg</eye-roll-deg-path>
+        <eye-pitch-deg-path>/sim/view[6]/pitch-deg</eye-pitch-deg-path>
+        <eye-heading-deg-path>/sim/view[6]/heading-deg</eye-heading-deg-path>
+
+        <at-model type="bool">true</at-model>
+        <at-model-idx type="int">0</at-model-idx>
+
+        <ground-level-nearplane-m type="double">1.0f</ground-level-nearplane-m>
+        <default-field-of-view-deg type="double">8.0</default-field-of-view-deg>
+
+        <x-offset-m type="double">0</x-offset-m>
+        <y-offset-m type="double">0</y-offset-m>
+        <z-offset-m type="double">0</z-offset-m>
+        <target-z-offset-m archive="y" type="double">1.5</target-z-offset-m>
+      </config>
+    </view>
+    
     <current-view>
       <field-of-view>55.0</field-of-view>
     </current-view>
@@ -84,14 +114,33 @@ Comper Swift simulation config.
       </electrical>
     </systems>
 
+<!--sub models -->
+    <submodels>
+      <serviceable type="bool">1</serviceable>
+      <path>Aircraft/ComperSwift/ComperSwift-submodels.xml</path>
+    </submodels>
+
     <chase-distance-m type="double" archive="y">-13.7</chase-distance-m>
 
     <help>
       <key>
+        <name>K</name>
+        <desc>toggle trajectory markers</desc>
+      </key>
+      <key>
+        <name>U</name>
+        <desc>update drop view position</desc>
+      </key>
+      <key>
         <name>[ ]</name>
         <desc>Adjust view left/right (no flaps!)</desc>
       </key>
-      <line>make mixture leaner to increase power</line>
+      <line>Top Speed:           140 mph (121 kt)</line>
+      <line>Cruise Speed:        120 mph (104 kt)</line>
+      <line>Max Engine Power:    85 bhp @ 3300 rpm (10 min max)</line>
+      <line>Normal Engine Power: 75 bhp @ 3000 rpm</line>
+      <line>Take off with the mixture set to 1 but this should</line>
+      <line>be reduced to about 0.6 for cruise</line>
     </help>
 
   </sim>
@@ -122,6 +171,26 @@ Comper Swift simulation config.
           <wrap type="bool">true</wrap>
         </binding>
       </key>
+      
+      <key n="75">
+        <name>K</name>
+        <desc>Toggle trajectory markers</desc>
+        <binding n="0">
+          <command>nasal</command>
+          <script>Swift.toggle_traj_mkr()</script>
+        </binding>
+      </key>
+
+<!-- Update Drop View position -->
+       <key n="85">
+        <name>U</name>
+        <desc>Update Drop View position</desc>
+        <binding n="0">
+          <command>nasal</command>
+          <script>Swift.update_drop_view_pos()</script>
+        </binding>
+      </key>
+      
     </keyboard>
   </input>
 
@@ -156,12 +225,15 @@ Comper Swift simulation config.
     </engines>
 
     <flight>
-      <aileron-trim type="double">0.015</aileron-trim>
+      <aileron-trim type="double">0</aileron-trim>
       <rudder-trim type="double">0</rudder-trim>
     </flight>
 
+<!-- Start with the Parking Brake on to simulate the rolling friction
+     of the tyres (the default parking brake value is 0.1).
+-->
     <gear>
-      <brake-parking type="double">0.04</brake-parking>
+      <brake-parking type="double">0.1</brake-parking>
       <tailwheel-lock type="bool">true</tailwheel-lock>
     </gear>
   </controls>
@@ -173,5 +245,12 @@ Comper Swift simulation config.
       </tank>
     </fuel>
   </consumables>
+
+  <nasal>
+    <Swift>
+      <file>Aircraft/ComperSwift/Nasal/ComperSwift.nas</file>
+      <script>start_up();</script>
+    </Swift>
+  </nasal>
 
 </PropertyList>

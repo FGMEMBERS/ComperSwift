@@ -4,7 +4,7 @@
 
 <PropertyList>
 
- <path>ComperSwift-000-038i.ac</path>
+ <path>ComperSwift-000-043.ac</path>
 
 <!-- De-select pilot when in view 0 -->
  <animation>
@@ -45,6 +45,11 @@
     <value>400</value>
    </greater-than>
   </condition>
+ </animation>
+
+ <animation>
+  <type>noshadow</type>
+  <object-name>PropDisk</object-name>
  </animation>
 
  <animation>
