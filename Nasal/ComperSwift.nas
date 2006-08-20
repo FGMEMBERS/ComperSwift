@@ -1,3 +1,12 @@
+var xoffs = props.globals.getNode("/sim/current-view/x-offset-m", 1);
+
+controls.flapsDown = func(v) {
+  if(!v) {
+    return interpolate(xoffs);
+  }
+  v *= 0.25;                                              # max. elongation [m]
+  interpolate(xoffs, v, abs(v - xoffs.getValue()) * 1.5); # 1.5 s for full move
+}
 #--------------------------------------------------------------------
 toggle_traj_mkr = func {
   if(getprop("ai/submodels/trajectory-markers") < 1) {
