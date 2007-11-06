@@ -43,7 +43,7 @@ Comper Swift simulation config.
 
     <view n="2">
       <config>
-        <x-offset-m archive="y" type="double">2.2</x-offset-m>
+        <y-offset-m archive="y" type="double">2.2</y-offset-m>
         <target-z-offset-m archive="y" type="double">2.0</target-z-offset-m>
       </config>
     </view>
