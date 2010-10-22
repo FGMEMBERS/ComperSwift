@@ -113,8 +113,7 @@ Comper Swift simulation config.
     </panel_2>
 
     <hud>
-      <path>Aircraft/ComperSwift/Huds/ComperSwift-hud1.xml</path>
-      <visibility>true</visibility>
+      <visibility n="1">true</visibility>
     </hud>
 
     <model>
