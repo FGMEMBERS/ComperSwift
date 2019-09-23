@@ -21,6 +21,23 @@ Comper Swift simulation config.
 
     <description>Comper Swift</description>
 
+    <rating>
+      <FDM type="int">     2 </FDM>
+      <systems type="int"> 0 </systems>
+      <cockpit type="int"> 0 </cockpit>
+      <model type="int">   2 </model>
+    </rating>
+
+    <tags>
+      <tag>1930s</tag>
+      <tag>racer</tag>
+      <tag>fixed-gear</tag>
+      <tag>piston</tag>
+      <tag>single-engine</tag>
+      <tag>propeller</tag>
+      <tag>tail-dragger</tag>
+    </tags>
+
     <virtual-cockpit archive="y">true</virtual-cockpit>
 
     <view n="0">
